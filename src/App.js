@@ -22,13 +22,13 @@ export default class App extends Component {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/catindex" component={CatIndex} />
-          <Route path="/catshow" component={CatShow} />
-          <Route path="/catnew" component={CatNew} />
-          <Route path="/catedit" component={CatEdit} />
-          <Route component={NotFound} />
-        </Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/catindex" component={CatIndex} />
+            <Route path="/catshow" component={CatShow} />
+            <Route path="/catnew" component={CatNew} />
+            <Route path="/catedit" component={CatEdit} />
+            <Route component={NotFound} />
+          </Switch>
         <Footer />
       </Router>
     )
