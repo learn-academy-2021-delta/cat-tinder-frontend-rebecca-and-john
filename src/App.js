@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import './App.css'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Home from './pages/Home'
 import CatIndex from './pages/CatIndex'
@@ -9,6 +10,7 @@ import NotFound from './pages/NotFound'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import mockCats from './mockCats.js'
+
 export default class App extends Component {
     constructor(props){
       super(props)
