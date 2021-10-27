@@ -4,7 +4,7 @@ export default class CatNew extends Component {
     render() {
         return (
             <>
-                
+                Cat New
             </>
         )
     }

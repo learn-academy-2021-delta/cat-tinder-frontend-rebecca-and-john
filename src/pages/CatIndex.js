@@ -4,7 +4,7 @@ export default class Catindex extends Component {
     render() {
         return (
             <>
-                
+                Cat Index
             </>
         )
     }

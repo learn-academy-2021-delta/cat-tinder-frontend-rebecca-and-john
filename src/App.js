@@ -28,8 +28,8 @@ export default class App extends Component {
           <Route path="/catnew" component={CatNew} />
           <Route path="/catedit" component={CatEdit} />
           <Route component={NotFound} />
-          <Footer />
         </Switch>
+        <Footer />
       </Router>
     )
   }

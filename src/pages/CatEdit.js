@@ -4,7 +4,7 @@ export default class CatEdit extends Component {
     render() {
         return (
             <>
-                
+                Cat Edit
             </>
         )
     }
