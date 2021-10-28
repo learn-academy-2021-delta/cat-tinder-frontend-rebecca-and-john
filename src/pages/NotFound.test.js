@@ -1,7 +1,6 @@
 import React from 'react'
 import Enzyme, { shallow } from 'enzyme'
 import NotFound from './NotFound.js'
-import CatError from '../assets/404.jpeg'
 import Adapter from 'enzyme-adapter-react-16'
 
 Enzyme.configure({ adapter: new Adapter() })
@@ -19,6 +18,4 @@ describe('when NotFound loads', () => {
         console.log(imgWrapper.prop())
         expect(imgWrapper.prop('src')).toEqual('404.jpeg')    
     })
-
-
 })
