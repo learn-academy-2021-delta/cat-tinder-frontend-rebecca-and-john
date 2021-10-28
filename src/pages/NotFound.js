@@ -6,8 +6,8 @@ export default class NotFound extends Component {
     render() {
         return (
             <>
-                <div className = 'error'>
-                    <img src = {CatError} alt = '404 Not Found'/>
+                <div className='error'>
+                    <img src={CatError} alt='404 Not Found'/>
                 </div>
             </>
         )

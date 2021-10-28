@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import { NavLink } from "react-router-dom"
-import { Nav } from "reactstrap"
-import { NavItem } from "reactstrap"
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+import { Nav, NavItem } from 'reactstrap'
+
 export default class Footer extends Component {
   render() {
     return (
