@@ -1,3 +1,17 @@
+header{
+  color: #2b2b2b;
+  font-family: 'Lobster Two', cursive;
+  font-size: 5rem;
+  background-color: rgb(255, 240, 213);
+  height: 8rem;
+}
+
+.error{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
 .App {
   text-align: center;
 }
