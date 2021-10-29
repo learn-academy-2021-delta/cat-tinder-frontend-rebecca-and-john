@@ -1,15 +1,86 @@
-header{
-  color: #2b2b2b;
-  font-family: 'Lobster Two', cursive;
-  font-size: 5rem;
+/* Header Styling */
+header {
   background-color: rgb(255, 240, 213);
-  height: 8rem;
-}
-
-.error{
+  height: 7rem;
   display: flex;
   justify-content: center;
-  background-color: black;
+  align-items: baseline;
+}
+
+.header-title{
+  padding: 0 auto;
+}
+
+header span {
+  font-family: "Lobster Two", cursive;
+  font-size: 4rem;
+}
+
+header img {
+  height: 2rem;
+}
+
+/* Header styling for breakpoints */
+@media only screen and (max-width: 768px) {
+  header {
+    height: 5rem; 
+  }
+
+  header span {
+    font-family: "Lobster Two", cursive;
+    font-size: 3rem;
+  }
+
+  header img {
+    height: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    height: 4rem;
+  }
+
+  header span {
+    font-family: "Lobster Two", cursive;
+    font-size: 2.15rem;
+  }
+
+  header img {
+    height: 0.90rem;
+  }
+}
+
+/* error page styling */
+.error {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(1.25, 1.25, 1.25);
+  height: auto;
+  padding: 20px 50% 20px 50%;
+}
+
+.error img{
+  height: 32rem;
+}
+
+/* error styling for breakpoints */
+@media only screen and (max-width: 768px) {
+  .error img{
+    height: 22rem; 
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .error img{
+    height: 15rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .error img{
+    height: 10rem;
+  }
 }
 
 .App {
