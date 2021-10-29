@@ -30,7 +30,7 @@ export default class CatNew extends Component {
     return (
       <>
         <div className="catnew-container">
-          <h3> New Cat </h3>
+          <h3>New Cat</h3>
           <Form>
             <FormGroup>
               <Label for="name">Cat's Name</Label>
