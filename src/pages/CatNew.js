@@ -22,32 +22,40 @@ export default class CatNew extends Component {
   render() {
     return (
       <>
-        <Form>
-          <FormGroup>
-            <Label for="name">Name</Label>
-            <Input
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-              value={this.state.form.name}
-            />
-            <Label for="age">Age</Label>
-            <Input
-              type="number"
-              name="age"
-              onChange={this.handleChange}
-              value={this.state.form.age}
-            />
-            <Label for="enjoys">Enjoys</Label>
-            <Input
-              type="text"
-              name="enjoys"
-              onChange={this.handleChange}
-              value={this.state.form.enjoys}
-            />
-          </FormGroup>
-            </Form>
-            {console.log(this.state.form)}
+        <div className="catnew-container">
+          <h3> New Cat </h3>
+          <Form>
+            <FormGroup>
+              <Label for="name">Cat's Name</Label>
+              <Input
+                type="text"
+                name="name"
+                onChange={this.handleChange}
+                value={this.state.form.name}
+              />
+              <Label for="age">Cat's Age</Label>
+              <Input
+                type="number"
+                name="age"
+                onChange={this.handleChange}
+                value={this.state.form.age}
+              />
+              <Label for="enjoys">Cat's Hobbies and Interests</Label>
+              <Input
+                type="text"
+                name="enjoys"
+                onChange={this.handleChange}
+                value={this.state.form.enjoys}
+              />
+            </FormGroup>
+          </Form>
+          <button
+            name="submit"
+            // onClick={this.handleSubmit}
+          >
+            Add New Cat
+          </button>
+        </div>
       </>
     );
   }
