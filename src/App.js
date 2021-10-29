@@ -10,7 +10,6 @@ import NotFound from './pages/NotFound'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import mockCats from './mockCats.js'
-import cats from './mockCats.js'
 
 export default class App extends Component {
   constructor(props) {
@@ -18,6 +17,10 @@ export default class App extends Component {
     this.state = {
       cats: mockCats,
     }
+  }
+
+  createNewCat = (newcat) => {
+    console.log(newcat)  
   }
 
   render() {
@@ -39,7 +42,10 @@ export default class App extends Component {
               return <CatShow cat={cat} />
             }}
           />
-          <Route path='/catnew' component={CatNew} />
+          <Route
+            path='/catnew'
+            render={(props) => <CatNew createNewCat={this.createNewCat} />}
+          />
           <Route path='/catedit' component={CatEdit} />
           <Route component={NotFound} />
         </Switch>
