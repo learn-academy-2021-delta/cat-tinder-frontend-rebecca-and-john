@@ -11,13 +11,13 @@ export default class Catindex extends Component {
           {this.props.cats &&
             this.props.cats.map((cat) => {
               return (
-                <p key={cat.id}>
+                <span key={cat.id}>
                   <Card>
                     <CardBody>
                       <CardTitle tag="h5">{cat.name}</CardTitle>
                     </CardBody>
                     <img
-                      alt="Card image cap"
+                      alt="random"
                       src="https://picsum.photos/318/180"
                       width="25%"
                     />
@@ -25,7 +25,7 @@ export default class Catindex extends Component {
                       <NavLink to={`/catshow/${cat.id}`}>Cat Info</NavLink>
                     </CardBody>
                   </Card>
-                </p>
+                </span>
               );
             })}
         </div>

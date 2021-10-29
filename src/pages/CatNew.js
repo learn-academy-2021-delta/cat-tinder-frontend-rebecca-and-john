@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {Form, FormGroup, Label, Input} from 'reactstrap'
+import { Form, FormGroup, Label, Input } from 'reactstrap'
+import { Redirect } from 'react-router-dom'
 
 export default class CatNew extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ export default class CatNew extends Component {
         age: "",
         enjoys: "",
       },
+      submitted: false
     };
   }
     
@@ -17,6 +19,11 @@ export default class CatNew extends Component {
         let { form } = this.state
         form[e.target.name] = e.target.value
         this.setState({form: form})
+    }
+  
+    handleSubmit = () => {
+      this.props.createNewCat(this.state.form)
+      this.setState({submitted: true})
     }
 
   render() {
@@ -51,10 +58,11 @@ export default class CatNew extends Component {
           </Form>
           <button
             name="submit"
-            // onClick={this.handleSubmit}
+            onClick={this.handleSubmit}
           >
             Add New Cat
           </button>
+          {this.state.submitted && <Redirect to="/catindex" />}
         </div>
       </>
     );
