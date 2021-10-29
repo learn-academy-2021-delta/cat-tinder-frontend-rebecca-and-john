@@ -6,9 +6,10 @@ import Adapter from 'enzyme-adapter-react-16'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('when header loads', () => {
-    it('contains text', () => {
-        const header = shallow(<Header />)
-        expect(header.find('header').text()).toEqual('Friendly Felines')
+    it('should contain header tag', () => {
+        const headerComponent = shallow(<Header />)
+        const headerTag = headerComponent.find('header')
+        expect(headerTag.length).toEqual(1)
         
     })
 })
