@@ -9,7 +9,7 @@ export default class Header extends Component {
               <header>
                   <div className='header-title'>
                     <img src={leftSplash} alt="three sideways tear drops" />
-                    <span > Friendly Felines </span>
+                    <span> Friendly Felines </span>
                     <img src={rightSplash} alt="three sideways tear drops" />
                 </div>
               </header>
