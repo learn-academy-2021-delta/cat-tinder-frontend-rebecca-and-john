@@ -4,8 +4,6 @@ import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
 import Home from './pages/Home'
-import CatIndex from './pages/CatIndex'
-import CatShow from './pages/CatShow'
 import CatNew from './pages/CatNew'
 import CatEdit from './pages/CatEdit'
 
@@ -24,12 +22,14 @@ describe('when App loads', () => {
     const app = shallow(<App />);
     const home = app.find('[path="/"]')
     const catIndex = app.find('[path="/catindex"]')
-    const catShow = app.find('[path="/catshow"]')
+    const catIndexRender = catIndex.props().render
+    const catShow = app.find('[path="/catshow/:id"]')
+    const catShowRender = catShow.props().render
     const catNew = app.find('[path="/catnew"]')
     const catEdit = app.find('[path="/catedit"]')
     expect(home.props().component).toEqual(Home)
-    expect(catIndex.props().component).toEqual(CatIndex)
-    expect(catShow.props().component).toEqual(CatShow)
+    expect(catIndexRender.length).toEqual(1)
+    expect(catShowRender.length).toEqual(1)
     expect(catNew.props().component).toEqual(CatNew)
     expect(catEdit.props().component).toEqual(CatEdit)
   });
