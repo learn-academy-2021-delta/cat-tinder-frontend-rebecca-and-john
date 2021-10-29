@@ -5,10 +5,11 @@ import Adapter from 'enzyme-adapter-react-16'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe('when header loads', () => {
-    it('contains text', () => {
-        const header = shallow(<Header />)
-        expect(header.find('header').text()).toEqual('Friendly Felines')
+describe('When CatIndex renders', () => {
+    it('displays a heading', () => {
+        const catIndex = shallow(<CatIndex />)
+        const indexHeading = catIndex.find('h3')
+        expect(indexHeading.text()).toEqual('Meet Our Cat Friends')
         
     })
 })
