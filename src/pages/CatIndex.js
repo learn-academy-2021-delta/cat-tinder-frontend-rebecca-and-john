@@ -18,10 +18,9 @@ export default class Catindex extends Component {
                         <CardBody>
                           <CardTitle tag='h5'>{cat.name}</CardTitle>
                         </CardBody>
-                        <img
+                        <CardImg
                           alt='random'
-                          src='https://picsum.photos/318/180'
-                          width='25%'
+                          src='https://placekitten.com/350/200'
                         />
                         <CardBody>
                           <NavLink to={`/catshow/${cat.id}`}>Cat Info</NavLink>
