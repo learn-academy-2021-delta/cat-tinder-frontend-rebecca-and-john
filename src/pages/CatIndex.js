@@ -11,10 +11,9 @@ export default class Catindex extends Component {
           {this.props.cats &&
             this.props.cats.map((cat) => {
               return (
-                <Row>
-                  {' '}
-                  <span key={cat.id}>
-                    <Col>
+                <Row key={cat.id}>
+                  {this.props.cats.map((cat) => (
+                    <Col md='4'>
                       <Card>
                         <CardBody>
                           <CardTitle tag='h5'>{cat.name}</CardTitle>
@@ -29,7 +28,7 @@ export default class Catindex extends Component {
                         </CardBody>
                       </Card>
                     </Col>
-                  </span>
+                  ))}
                 </Row>
               )
             })}
