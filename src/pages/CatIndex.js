@@ -8,31 +8,28 @@ export default class Catindex extends Component {
       <>
         <div className='catindex-container'>
           <h3>Meet Our Cat Friends</h3>
-          {this.props.cats &&
-            this.props.cats.map((cat) => {
-              return (
-                <Row>
-                  {' '}
-                  <span key={cat.id}>
-                    <Col>
-                      <Card>
-                        <CardBody>
-                          <CardTitle tag='h5'>{cat.name}</CardTitle>
-                        </CardBody>
-                        <img
-                          alt='random'
-                          src='https://picsum.photos/318/180'
-                          width='25%'
-                        />
-                        <CardBody>
-                          <NavLink to={`/catshow/${cat.id}`}>Cat Info</NavLink>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  </span>
-                </Row>
-              )
-            })}
+
+          <Row>
+            {this.props.cats &&
+              this.props.cats.map((cat) => {
+                return (
+                  <Col md='4' key={cat.id}>
+                    <Card>
+                      <CardBody>
+                        <CardTitle tag='h5'>{cat.name}</CardTitle>
+                      </CardBody>
+                      <CardImg
+                        alt='random'
+                        src='https://placekitten.com/350/200'
+                      />
+                      <CardBody>
+                        <NavLink to={`/catshow/${cat.id}`}>Cat Info</NavLink>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                )
+              })}
+          </Row>
         </div>
       </>
     )

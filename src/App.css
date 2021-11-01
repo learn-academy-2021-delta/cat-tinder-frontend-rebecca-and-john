@@ -2,6 +2,7 @@
 header {
   background-color: rgb(255, 240, 213);
   height: 7rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -54,6 +55,30 @@ header img {
   }
 }
 
+/* Footer Styling */
+footer{
+  background-color: rgb(255, 240, 213);
+  height: 3rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.footer-Nav{
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+}
+
+.footer-Nav-NavItems{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-Nav-NavItem{
+  padding: 0 20px 0 20px;
+}
+
 /* error page styling */
 .error {
   display: flex;
@@ -92,20 +117,19 @@ header img {
   padding: 35px;
 }
 
-/* CatNew styling */
-.catnew-container{
+/* CatShow Styling */
+.catshow-container{
+  padding: 35px;
+}
+
+/* Cat form styling */
+.catform-container{
   margin: 20px 100px 0 100px;
 }
 
-.catnew-container label{
+.catform-container label{
   margin: 20px 0 0 0;
 }
-
-.catnew-container button{
-  margin: 10px 0 30px 0;
-  border-radius: 6%;
-}
-
 
 /* built in styling from react */
 .App {
