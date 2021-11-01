@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, FormGroup, Label, Input } from 'reactstrap'
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { Redirect } from 'react-router-dom'
 
 export default class CatNew extends Component {
@@ -29,7 +29,7 @@ export default class CatNew extends Component {
   render() {
     return (
       <>
-        <div className="catnew-container">
+        <div className="catform-container">
           <h3>New Cat</h3>
           <Form>
             <FormGroup>
@@ -56,12 +56,14 @@ export default class CatNew extends Component {
               />
             </FormGroup>
           </Form>
-          <button
+          <Button
             name="submit"
             onClick={this.handleSubmit}
+            color="secondary"
+            outline
           >
             Add New Cat
-          </button>
+          </Button>
           {this.state.submitted && <Redirect to="/catindex" />}
         </div>
       </>
