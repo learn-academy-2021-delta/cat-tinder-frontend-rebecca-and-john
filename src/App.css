@@ -2,6 +2,7 @@
 header {
   background-color: rgb(255, 240, 213);
   height: 7rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -52,6 +53,30 @@ header img {
   header img {
     height: 0.90rem;
   }
+}
+
+/* Footer Styling */
+footer{
+  background-color: rgb(255, 240, 213);
+  height: 3rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.footer-Nav{
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+}
+
+.footer-Nav-NavItems{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-Nav-NavItem{
+  padding: 0 20px 0 20px;
 }
 
 /* error page styling */
