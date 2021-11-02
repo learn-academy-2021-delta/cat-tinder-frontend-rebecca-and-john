@@ -1,15 +1,21 @@
 /* Header Styling */
 header {
   background-color: rgb(255, 240, 213);
-  height: 7rem;
+  height: 17rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
+.header {
+  /* position: absolute;
+  background-size: cover;
+  background-position: center; */
+}
+
 .header-title{
-  padding: 0 auto;
+  margin: 80px 0;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -20,7 +26,7 @@ header span {
   font-size: 4rem;
 }
 
-header img {
+header .teardrop {
   height: 2rem;
 }
 
@@ -57,12 +63,20 @@ header img {
 
 /* Footer Styling */
 footer{
-  background-color: rgb(255, 240, 213);
+  background-color: rgb(138,179,51);
   height: 3rem;
   left: 0;
   bottom: 0;
   width: 100%;
   position: fixed;
+}
+
+.footer-Nav .nav-item a {
+  color: white;
+  padding: 10px;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .footer-Nav{
