@@ -17,9 +17,21 @@ export default class CatShow extends Component {
             </>
           )}
 
-          <NavLink to={`/catedit/${this.props.cat.id}`}>
+          <NavLink to="/catindex">
             <Button color="secondary" outline>
+              Back
+            </Button>
+          </NavLink>
+
+          <NavLink to={`/catedit/${this.props.cat.id}`}>
+            <Button color="info" outline>
               Edit Cat Profile
+            </Button>
+          </NavLink>
+
+          <NavLink to="/catindex">
+            <Button color="danger" outline>
+              Delete Cat Profile
             </Button>
           </NavLink>
         </div>
