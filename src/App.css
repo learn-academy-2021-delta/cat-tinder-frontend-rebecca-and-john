@@ -1,26 +1,35 @@
 /* Header Styling */
 header {
-  background-color: rgb(255, 240, 213);
-  height: 7rem;
+  height: 17rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
+  background-color: #a3d6e9;
+}
+
+.headerImage {
+  position: relative;
+  top: 0;
+  background-size: cover;
+  background-position: center;
 }
 
 .header-title{
-  padding: 0 auto;
+  margin: 90px 0;
   display: flex;
   justify-content: center;
   align-items: baseline;
+  z-index: 1;
 }
 
 header span {
   font-family: "Lobster Two", cursive;
   font-size: 4rem;
+  color: deeppink;
 }
 
-header img {
+header .teardrop {
   height: 2rem;
 }
 
@@ -57,12 +66,20 @@ header img {
 
 /* Footer Styling */
 footer{
-  background-color: rgb(255, 240, 213);
+  background-color: rgb(44 37 37);
   height: 3rem;
   left: 0;
   bottom: 0;
   width: 100%;
   position: fixed;
+}
+
+.footer-Nav .nav-item a {
+  color: white;
+  padding: 10px;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .footer-Nav{
