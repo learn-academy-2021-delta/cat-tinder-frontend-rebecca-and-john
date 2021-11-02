@@ -26,6 +26,7 @@ header {
 header span {
   font-family: "Lobster Two", cursive;
   font-size: 4rem;
+  color: deeppink;
 }
 
 header .teardrop {
