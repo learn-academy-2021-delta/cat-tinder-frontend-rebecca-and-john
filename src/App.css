@@ -1,24 +1,26 @@
 /* Header Styling */
 header {
-  background-color: rgb(255, 240, 213);
   height: 17rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
+  background-color: #a3d6e9;
 }
 
-.header {
-  /* position: absolute;
+.headerImage {
+  position: relative;
+  top: 0;
   background-size: cover;
-  background-position: center; */
+  background-position: center;
 }
 
 .header-title{
-  margin: 80px 0;
+  margin: 90px 0;
   display: flex;
   justify-content: center;
   align-items: baseline;
+  z-index: 1;
 }
 
 header span {
@@ -63,7 +65,7 @@ header .teardrop {
 
 /* Footer Styling */
 footer{
-  background-color: rgb(138,179,51);
+  background-color: rgb(129 50 4);
   height: 3rem;
   left: 0;
   bottom: 0;
