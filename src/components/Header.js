@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import leftSplash from '../assets/leftSplash.png'
 import rightSplash from '../assets/rightSplash.png'
 // import Background from '../assets/AdobeStock_318318411.jpeg'
-import headerImage from '../assets/AdobeStock_318318411.jpeg'
-
+import headerImage from '../assets/AdobeStock_318318411-min.jpeg'
 
 export default class Header extends Component {
   render() {
@@ -17,13 +16,13 @@ export default class Header extends Component {
           />
           <div className='header-title'>
             <img
-              className='teardrop'
+              className='teardrop img-fluid'
               src={leftSplash}
               alt='three sideways tear drops'
             />
             <span> Friendly Felines </span>
             <img
-              className='teardrop'
+              className='teardrop img-fluid'
               src={rightSplash}
               alt='three sideways tear drops'
             />
