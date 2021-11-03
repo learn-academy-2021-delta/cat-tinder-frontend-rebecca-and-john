@@ -180,8 +180,12 @@ footer{
   padding: 35px;
 }
 
+.catshow-container p{
+  margin: 20px 0 0 0;
+}
+
 .catshow-container Button{
-  margin: 5px 5px 5px 0;
+  margin: 20px 5px 5px 0;
 }
 
 /* Cat form styling */
