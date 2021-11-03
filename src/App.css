@@ -162,6 +162,9 @@ footer{
 .catform-container label{
   margin: 20px 0 0 0;
 }
+.catform-container Button{
+  margin: 5px 5px 5px 0;
+}
 
 /* built in styling from react */
 body{

@@ -50,8 +50,21 @@ export default class App extends Component {
   }
 
   updateCat = (editCat, id) => {
-    console.log("cat:", editCat)
-    console.log("id:", id)
+    fetch(`http://localhost:3000/cats/${id}`, {
+      body: JSON.stringify(editCat),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+      .then((response) => {
+        if (response.status === 422) {
+          alert("Please check your submission.");
+        }
+        return response.json();
+      })
+      .then(payload => this.catRead())
+      .catch((errors) => console.log("Cat edit errors:", errors));
   }
 
   render() {
