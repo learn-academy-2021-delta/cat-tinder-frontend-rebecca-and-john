@@ -7,6 +7,7 @@ Enzyme.configure({ adapter: new Adapter() })
 describe("Home renders content", () => {
   it('Home renders content', () => {
     const home = shallow(<Home />)
-    expect(home.find('p').text()).toEqual('Home')
+    const pTags = home.find("p");
+    expect(pTags.length).toEqual(4)
   })
 })
