@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 
 export default class CatShow extends Component {
   render() {
-    // console.log(this.props.cat)
     return (
       <>
         <div className='catshow-container'>

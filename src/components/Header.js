@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import leftSplash from '../assets/leftSplash.png'
 import rightSplash from '../assets/rightSplash.png'
-// import Background from '../assets/AdobeStock_318318411.jpeg'
 import headerImage from '../assets/AdobeStock_318318411-min.jpeg'
 import { NavLink } from "react-router-dom";
 

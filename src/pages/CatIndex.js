@@ -13,7 +13,7 @@ export default class Catindex extends Component {
             {this.props.cats &&
               this.props.cats.map((cat) => {
                 return (
-                  <Col md='4' key={cat.id}>
+                  <Col md='4' className='pb-3' key={cat.id}>
                     <Card>
                       <CardBody>
                         <CardTitle tag='h5'>{cat.name}</CardTitle>
@@ -23,7 +23,9 @@ export default class Catindex extends Component {
                         src='https://placekitten.com/350/200'
                       />
                       <CardBody>
-                        <NavLink to={`/catshow/${cat.id}`}>Cat Info</NavLink>
+                        <NavLink to={`/catshow/${cat.id}`}>
+                          Meet {cat.name}
+                        </NavLink>
                       </CardBody>
                     </Card>
                   </Col>
