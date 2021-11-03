@@ -9,14 +9,26 @@ import CatEdit from './pages/CatEdit'
 import NotFound from './pages/NotFound'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import mockCats from './mockCats.js'
+// import mockCats from './mockCats.js'
 
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      cats: mockCats,
+      cats: []
     }
+  }
+
+  componentDidMount() {
+    this.catRead()
+  }
+
+  catRead = () => {
+    fetch('http://localhost:3000/cats')
+    .then((response) => response.json())
+    // set the state with the data from the backend into the empty array
+    .then(catsArray => this.setState({cats: catsArray}))
+    .catch(errors => console.log("Cat read errors:", errors))
   }
 
   createNewCat = (newcat) => {
