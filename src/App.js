@@ -9,13 +9,13 @@ import CatEdit from './pages/CatEdit'
 import NotFound from './pages/NotFound'
 import Header from './components/Header'
 import Footer from './components/Footer'
-// import mockCats from './mockCats.js'
+
 
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      cats: []
+      cats: [],
     }
   }
 
@@ -25,10 +25,10 @@ export default class App extends Component {
 
   catRead = () => {
     fetch('http://localhost:3000/cats')
-    .then((response) => response.json())
-    // set the state with the data from the backend into the empty array
-    .then(catsArray => this.setState({cats: catsArray}))
-    .catch(errors => console.log("Cat read errors:", errors))
+      .then((response) => response.json())
+      // set the state with the data from the backend into the empty array
+      .then((catsArray) => this.setState({ cats: catsArray }))
+      .catch((errors) => console.log('Cat read errors:', errors))
   }
 
   createNewCat = (newCat) => {
@@ -65,6 +65,18 @@ export default class App extends Component {
       })
       .then(payload => this.catRead())
       .catch((errors) => console.log("Cat edit errors:", errors));
+    }
+
+  deleteCat = (id) => {
+    fetch(`http://localhost:3000/cats/${id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'DELETE',
+    })
+      .then((response) => response.json())
+      .then((payload) => this.catRead())
+      .catch((errors) => console.log('delete errors:', errors))
   }
 
   render() {
@@ -83,7 +95,7 @@ export default class App extends Component {
               let id = props.match.params.id
               let cat = this.state.cats.find((c) => c.id === +id)
               console.log(cat)
-              return <CatShow cat={cat} />
+              return <CatShow cat={cat} deleteCat={this.deleteCat} />
             }}
           />
           <Route
@@ -94,9 +106,10 @@ export default class App extends Component {
             path='/catedit/:id'
             render={(props) => {
               let id = props.match.params.id
-              let cat = this.state.cats.find(cat => cat.id === +id)
+              let cat = this.state.cats.find((cat) => cat.id === +id)
               return <CatEdit updateCat={this.updateCat} cat={cat} />
-            }}/>
+            }}
+          />
           <Route component={NotFound} />
         </Switch>
         <Footer />

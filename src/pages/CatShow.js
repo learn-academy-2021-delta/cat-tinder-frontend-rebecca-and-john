@@ -7,7 +7,7 @@ export default class CatShow extends Component {
     // console.log(this.props.cat)
     return (
       <>
-        <div className="catshow-container">
+        <div className='catshow-container'>
           <h3>Cat Details</h3>
           {this.props.cat && (
             <>
@@ -16,26 +16,30 @@ export default class CatShow extends Component {
               <p>Hobbies and Interests: {this.props.cat.enjoys}</p>
             </>
           )}
-          
-          <NavLink to="/catindex">
-            <Button color="secondary" outline>
+
+          <NavLink to='/catindex'>
+            <Button color='secondary' outline>
               Back
             </Button>
           </NavLink>
 
           <NavLink to={`/catedit/${this.props.cat.id}`}>
-            <Button color="info" outline>
+            <Button color='info' outline>
               Edit Cat Profile
             </Button>
           </NavLink>
 
-          <NavLink to="/catindex">
-            <Button color="danger" outline>
+          <NavLink to='/catindex'>
+            <Button
+              onClick={this.props.deleteCat(this.props.cat.id)}
+              color='danger'
+              outline
+            >
               Delete Cat Profile
             </Button>
           </NavLink>
         </div>
       </>
-    );
+    )
   }
 }
