@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
-import { Redirect } from "react-router-dom";
+import { Form, FormGroup, Label, Input, Button} from "reactstrap";
+import { Redirect, NavLink} from "react-router-dom";
 
 export default class CatEdit extends Component {
   constructor(props) {
     super(props);
     this.state = {
       form: {
-        name: "",
-        age: "",
-        enjoys: "",
+        name: this.props.cat.name,
+        age: this.props.cat.age,
+        enjoys: this.props.cat.enjoys,
       },
       submitted: false,
     };
@@ -31,7 +31,6 @@ export default class CatEdit extends Component {
       <>
         <div className="catform-container">
           <h3>{this.props.cat.name}'s Profile</h3>
-          {console.log(this.props.cat)}
           <Form>
             <FormGroup>
               <Label for="name">Cat's Name</Label>
@@ -57,16 +56,25 @@ export default class CatEdit extends Component {
               />
             </FormGroup>
           </Form>
+
+          <NavLink to={`/catshow/${this.props.cat.id}`}>
+            <Button color="secondary" outline>
+              Back
+            </Button>
+          </NavLink>
+
           <Button
             name="submit"
             onClick={this.handleSubmit}
-            color="secondary"
+            color="info"
             outline
           >
             Edit Cat Profile
           </Button>
-          
-          {this.state.submitted && <Redirect to={`/catshow/${this.props.cat.id}`} />}
+
+          {this.state.submitted && (
+            <Redirect to={`/catshow/${this.props.cat.id}`} />
+          )}
         </div>
       </>
     );

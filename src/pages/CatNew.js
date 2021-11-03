@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
-import { Redirect } from 'react-router-dom'
+import { Redirect, NavLink} from 'react-router-dom'
 
 export default class CatNew extends Component {
   constructor(props) {
@@ -56,10 +56,17 @@ export default class CatNew extends Component {
               />
             </FormGroup>
           </Form>
+
+          <NavLink to="/">
+            <Button color="secondary" outline>
+              Home
+            </Button>
+          </NavLink>
+
           <Button
             name="submit"
             onClick={this.handleSubmit}
-            color="secondary"
+            color="info"
             outline
           >
             Add New Cat
