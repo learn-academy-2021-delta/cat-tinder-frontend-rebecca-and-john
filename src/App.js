@@ -27,7 +27,7 @@ export default class App extends Component {
     fetch('http://localhost:3000/cats')
       .then((response) => response.json())
       // set the state with the data from the backend into the empty array
-      .then((catsArray) => this.setState({ cats: catsArray }))
+      .then((catsArray) => this.setState({ cats: catsArray}))
       .catch((errors) => console.log('Cat read errors:', errors))
   }
 
@@ -74,9 +74,9 @@ export default class App extends Component {
       },
       method: 'DELETE',
     })
-      .then((response) => response.json())
-      .then((payload) => this.catRead())
-      .catch((errors) => console.log('delete errors:', errors))
+      // .then((response) => response.json()) //our destroy method isn't returning a json
+      .then(() => this.catRead())
+      .catch((errors) => console.log('Cat delete errors:', errors))
   }
 
   render() {

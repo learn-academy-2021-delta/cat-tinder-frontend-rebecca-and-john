@@ -31,7 +31,7 @@ export default class CatShow extends Component {
 
           <NavLink to='/catindex'>
             <Button
-              onClick={this.props.deleteCat(this.props.cat.id)}
+              onClick={() => this.props.deleteCat(this.props.cat.id)}
               color='danger'
               outline
             >
