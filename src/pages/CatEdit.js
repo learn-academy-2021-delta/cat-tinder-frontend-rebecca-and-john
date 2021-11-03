@@ -39,6 +39,7 @@ export default class CatEdit extends Component {
                 type="text"
                 name="name"
                 onChange={this.handleChange}
+                placeholder={this.props.cat.name}
                 value={this.state.form.name}
               />
               <Label for="age">Cat's Age</Label>
@@ -46,6 +47,7 @@ export default class CatEdit extends Component {
                 type="number"
                 name="age"
                 onChange={this.handleChange}
+                placeholder={this.props.cat.age}
                 value={this.state.form.age}
               />
               <Label for="enjoys">Cat's Hobbies and Interests</Label>
@@ -53,6 +55,7 @@ export default class CatEdit extends Component {
                 type="text"
                 name="enjoys"
                 onChange={this.handleChange}
+                placeholder={this.props.cat.enjoys}
                 value={this.state.form.enjoys}
               />
             </FormGroup>
@@ -65,8 +68,10 @@ export default class CatEdit extends Component {
           >
             Edit Cat Profile
           </Button>
-          
-          {this.state.submitted && <Redirect to={`/catshow/${this.props.cat.id}`} />}
+
+          {this.state.submitted && (
+            <Redirect to={`/catshow/${this.props.cat.id}`} />
+          )}
         </div>
       </>
     );

@@ -16,7 +16,7 @@ export default class CatShow extends Component {
               <p>Hobbies and Interests: {this.props.cat.enjoys}</p>
             </>
           )}
-
+          
           <NavLink to="/catindex">
             <Button color="secondary" outline>
               Back

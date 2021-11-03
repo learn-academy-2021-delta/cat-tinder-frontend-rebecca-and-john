@@ -16,10 +16,10 @@ header {
 }
 
 .header-title{
-  margin: 90px 0;
+  /* margin: 90px 0; */
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   z-index: 1;
 }
 
@@ -128,6 +128,17 @@ footer{
   }
 }
 
+/* Home styling */
+.home-container{
+  text-align: center;
+  padding: 35px;
+}
+
+.home-container p{
+  margin: 0;
+  padding: 0;
+}
+
 /* CatIndex styling */
 
 .catindex-container{
@@ -137,6 +148,10 @@ footer{
 /* CatShow Styling */
 .catshow-container{
   padding: 35px;
+}
+
+.catshow-container Button{
+  margin: 5px 5px 5px 0;
 }
 
 /* Cat form styling */
@@ -149,6 +164,9 @@ footer{
 }
 
 /* built in styling from react */
+body{
+  margin-bottom: 100px;
+}
 .App {
   text-align: center;
 }

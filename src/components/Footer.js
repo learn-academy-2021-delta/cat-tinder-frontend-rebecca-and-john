@@ -13,7 +13,7 @@ export default class Footer extends Component {
           <div className="footer-Nav-NavItems">
             <div className="footer-Nav-NavItem">
               <NavItem>
-                <NavLink to="/catindex">Meet All the Cats</NavLink>
+                <NavLink to="/catindex">Meet the Cats</NavLink>
               </NavItem>
             </div>
             <div className="footer-Nav-NavItem">
