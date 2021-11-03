@@ -9,11 +9,11 @@ export default class Header extends Component {
     return (
       <>
         <header className='header'>
-          <img
-            src={headerImage}
-            className='headerImage img-fluid'
-            alt='cat wearing a bowtie'
-          />
+            <img
+              src={headerImage}
+              className='headerImage img-fluid'
+              alt='cat wearing a bowtie'
+            />
           <div className='header-title'>
             <img
               className='teardrop img-fluid'

@@ -8,6 +8,7 @@ header {
   background-color: #a3d6e9;
 }
 
+
 .headerImage {
   position: relative;
   top: 0;
@@ -16,7 +17,6 @@ header {
 }
 
 .header-title{
-  /* margin: 90px 0; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,9 +34,9 @@ header .teardrop {
 }
 
 /* Header styling for breakpoints */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1324px) {
   header {
-    height: 5rem; 
+    height: 10rem; 
   }
 
   header span {
@@ -44,23 +44,53 @@ header .teardrop {
     font-size: 3rem;
   }
 
-  header img {
-    height: 1.25rem;
+  header .teardrop {
+    height: 1.50rem;
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 871px) {
+  header {
+    height: 8rem;
+  }
+
+  header span {
+    font-family: "Lobster Two", cursive;
+    font-size: 2.5rem;
+  }
+
+  header .teardrop {
+    height: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 871px) {
+  header {
+    height: 6rem;
+  }
+
+  header span {
+    font-family: "Lobster Two", cursive;
+    font-size: 2rem;
+  }
+
+  header .teardrop {
+    height: .90rem;
+  }
+}
+
+@media only screen and (max-width: 539px) {
   header {
     height: 4rem;
   }
 
   header span {
     font-family: "Lobster Two", cursive;
-    font-size: 2.15rem;
+    font-size: 1.5rem;
   }
 
-  header img {
-    height: 0.90rem;
+  header .teardrop {
+    height: .70rem;
   }
 }
 
