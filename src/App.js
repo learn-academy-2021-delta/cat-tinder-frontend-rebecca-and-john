@@ -31,8 +31,22 @@ export default class App extends Component {
     .catch(errors => console.log("Cat read errors:", errors))
   }
 
-  createNewCat = (newcat) => {
-    console.log(newcat)  
+  createNewCat = (newCat) => {
+    fetch("http://localhost:3000/cats", {
+      body: JSON.stringify(newCat),
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      method: "POST"
+    })
+      .then((response) => {
+        if (response.status === 422) {
+          alert("Please check your submission.")
+        }
+        return response.json()
+      })
+      .then(payload => this.catRead())
+      .catch((errors) => console.log("Cat create errors:", errors))
   }
 
   updateCat = (editCat, id) => {
